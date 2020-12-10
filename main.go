@@ -18,14 +18,15 @@ func main() {
 	}
 }
 
-func run(args []string, stdout io.Writer) error {
+func run(args []string, w io.Writer) error {
 	home, err := os.UserHomeDir()
 	if err != nil {
 		return err
 	}
 
 	src := path.Join(home, "Documents", "Zoom")
-	dst := "notes/README.md"
+	dst := "output.md"
 
+	fmt.Fprintf(w, "Saving file %s\n", dst)
 	return SaveZoomNotes(src, dst)
 }

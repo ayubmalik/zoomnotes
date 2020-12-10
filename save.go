@@ -52,7 +52,7 @@ func formatMarkdown(file string) (string, error) {
 	info, _ := os.Stat(file)
 	var s strings.Builder
 
-	s.WriteString(fmt.Sprintf("#%s\n", info.ModTime().Format("02/01/2006")))
+	s.WriteString(fmt.Sprintf("# %s\n\n", info.ModTime().Format("02/01/2006")))
 
 	f, err := os.Open(file)
 	if err != nil {
