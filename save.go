@@ -77,7 +77,7 @@ func formatMarkdown(file string) (string, error) {
 		// strip fixed width date
 		line = regex.ReplaceAllString(line, "")
 		line = strings.TrimSpace(line)
-		s.WriteString(line + "\n")
+		s.WriteString(line + "\n\n")
 	}
 	s.WriteString("\n")
 	return s.String(), nil
