@@ -62,7 +62,7 @@ func formatMarkdown(file string) (string, error) {
 
 	// remove prefix e.g. in line "18:01:23    From Roger Mellie : Hello world"
 	// will only keep "Hello world"
-	regex := regexp.MustCompile("^\\d\\d:\\d\\d:\\d\\d.*From.*:")
+	regex := regexp.MustCompile("^\\d\\d:\\d\\d:\\d\\d.*From.*?:")
 	r := bufio.NewReader(f)
 	for {
 		line, err := r.ReadString('\n') // 0x0A separator = newline
