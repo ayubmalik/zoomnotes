@@ -25,7 +25,7 @@ func run(args []string, stdout io.Writer) error {
 	}
 
 	src := path.Join(home, "Documents", "Zoom")
-	dst := "notes/all.md"
+	dst := "notes/README.md"
 
 	return SaveZoomNotes(src, dst)
 }
